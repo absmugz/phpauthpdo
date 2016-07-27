@@ -1,10 +1,6 @@
 <?php
 
 
-if (!$_SESSION['logged_in']) {
-    header("Location: login.php");
-    exit;
-}
 include('includes/dbconfig.php');
 include('includes/session.php');
 $userDetails=$userClass->userDetails($session_uid);
