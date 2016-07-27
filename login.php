@@ -1,16 +1,18 @@
 <?php
 
-
+/*
 define('APPLICATION_PATH', __DIR__);
 
 set_include_path(implode(PATH_SEPARATOR, array(
-    APPLICATION_PATH . '\includes',
-    APPLICATION_PATH . '\classes',
+    APPLICATION_PATH . '/includes',
+    APPLICATION_PATH . '/classes',
 )));
 
 include_once("functions.php");
 include_once('userClass.php');
+*/
 
+include('includes/functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,15 +51,13 @@ include_once('userClass.php');
 
     <div class="container">
 
-
+      <form class="form-signin" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="login">
        <div class="errorMsg"><?php echo $errorMsgLogin; ?></div>
-
-      <form class="form-signin" method="post" action="" name="login">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input name="usernameEmail" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input name="usernameEmail" type="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password">
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me

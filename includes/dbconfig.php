@@ -2,10 +2,10 @@
 session_start();
 /* DATABASE CONFIGURATION */
 define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'username');
-define('DB_PASSWORD', 'password');
-define('DB_DATABASE', 'databasename');
-define("BASE_URL", "http://localhost/PHPLoginHash/"); // Eg. http://yourwebsite.com
+define('DB_USERNAME', 'bokroot2_dbuser');
+define('DB_PASSWORD', 'h3ath3r555');
+define('DB_DATABASE', 'bokroot2_css_ccw');
+define("BASE_URL", "http://localhost/phpauthpdo/"); // Eg. http://yourwebsite.com
 
 
 function getDB()
@@ -26,3 +26,5 @@ echo 'Connection failed: ' . $e->getMessage();
 
 }
 ?>
+
+
